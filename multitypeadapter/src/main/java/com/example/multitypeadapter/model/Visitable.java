@@ -7,6 +7,6 @@ import com.example.multitypeadapter.type.TypeFactory;
  */
 
 public interface Visitable {
-    int type(TypeFactory typeFactory);
+
 }
 

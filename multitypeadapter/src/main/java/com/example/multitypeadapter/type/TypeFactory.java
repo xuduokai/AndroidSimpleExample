@@ -15,12 +15,6 @@ import com.example.multitypeadapter.model.Two;
  */
 
 public interface TypeFactory {
-    int type(One one);
-
-    int type(Two two);
-
-    int type(Normal normal);
-
     BaseViewHolder createViewHolder(int type, View itemView);
 
     int getTypeLayoutId(Class c);

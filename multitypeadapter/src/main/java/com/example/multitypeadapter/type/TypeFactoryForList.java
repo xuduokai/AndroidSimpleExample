@@ -62,23 +62,6 @@ public class TypeFactoryForList implements TypeFactory {
         layoutIdMap.put(Normal.class, TYPE_RESOURCE_NORMAL);
     }
 
-
-    @Override
-
-    public int type(One one) {
-        return TYPE_RESOURCE_ONE;
-    }
-
-    @Override
-    public int type(Two two) {
-        return TYPE_RESOURCE_TWO;
-    }
-
-    @Override
-    public int type(Normal normal) {
-        return TYPE_RESOURCE_NORMAL;
-    }
-
     @Override
     public BaseViewHolder createViewHolder(int type, View itemView) {
 
@@ -104,9 +87,9 @@ public class TypeFactoryForList implements TypeFactory {
     @Override
     public int getTypeLayoutId(Class c) {
         if (layoutIdMap.get(c) == null) {
-            return layoutIdMap.get(c);
-        } else {
             return 0;
+        } else {
+            return layoutIdMap.get(c);
         }
     }
 }
