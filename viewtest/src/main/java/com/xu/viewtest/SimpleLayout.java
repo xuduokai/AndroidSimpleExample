@@ -1,0 +1,43 @@
+package com.xu.viewtest;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
+
+/**
+ * Created by xuduokai on 2017/6/3.
+ */
+
+public class SimpleLayout extends ViewGroup {
+    public SimpleLayout(Context context) {
+        super(context);
+    }
+
+    public SimpleLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public SimpleLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        //<editor-fold desc="hhhh">
+        if (getChildCount() > 0) {
+            View childView = getChildAt(0);
+            measureChild(childView, widthMeasureSpec, heightMeasureSpec);
+        }
+        //</editor-fold>
+    }
+
+    @Override
+    protected void onLayout(boolean b, int i, int i1, int i2, int i3) {
+        if (getChildCount() > 0) {
+            View childView = getChildAt(0);
+            childView.layout(0, 0, getMeasuredWidth(), getMeasuredHeight());
+        }
+    }
+}

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         img = (ImageView) findViewById(R.id.img);
-        img.setImageResource(R.drawable.error_img);
+//        img.setImageResource(R.drawable.error_img);
 /*        img.setBackgroundResource(R.drawable.sdk_voice_frame_animation);
         AnimationDrawable drawable = (AnimationDrawable) img.getBackground();
         drawable.start();*/
@@ -29,12 +30,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(TAG, "onClick: " );
             }
         });
+
+        TextView textView = (TextView) findViewById(R.id.text);
+        textView.setText(getEmojiByUnicode(11));
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        printBitmapSize(img);
+//        printBitmapSize(img);
     }
 
     private void printBitmapSize(ImageView imageView) {
@@ -48,5 +52,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.e(TAG, "Drawable is null !");
         }
+    }
+
+    public String getEmojiByUnicode(int unicode){
+        return new String(Character.toChars(Integer.parseInt("1f60a",16)));
     }
 }

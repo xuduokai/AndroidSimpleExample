@@ -1,5 +1,6 @@
 package com.example.recyclerview;
 
+import android.animation.Animator;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -8,11 +9,13 @@ import android.widget.TextView;
 
 import java.util.HashSet;
 
+import static android.content.ContentValues.TAG;
+
 /**
  * Created by Administrator on 2016/7/18.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private static final long LIGHT_DURATION = 1500;
+    private static final long LIGHT_DURATION = 10000;
     //数据集
     private String[] mDataSet;
 
@@ -23,28 +26,51 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         this.mDataSet = mDataSet;
     }
 
-    private void hideLight(View item) {
+
+    private void hideLight(final View item) {
 //        item.setAlpha(0.1f);
-        item.animate().alpha(0.1f).setDuration(LIGHT_DURATION);
+        item.animate().alpha(0.1f).setDuration(LIGHT_DURATION).setListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                Log.e("Track", "onAnimationStart" + item.getAlpha());
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Log.e("Track", "onAnimationEnd" + item.getAlpha());
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                Log.e("Track", "onAnimationCancel");
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
     }
 
     private void showLight(View item) {
-//        item.setAlpha(1f);
-        item.animate().alpha(1f).setDuration(LIGHT_DURATION);
+        item.setAlpha(1f);
+//        item.animate().alpha(1f).setDuration(LIGHT_DURATION);
     }
 
 
-    int mmm=0;
+    int mmm = 0;
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = View.inflate(parent.getContext(), android.R.layout.simple_list_item_1, null);
+        View view = View.inflate(parent.getContext(), R.layout.item, null);
         ViewHolder holder = new ViewHolder(view);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.mTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                ((MyTextView) view).startAnimation();
                 hideLight(view);
                 mmm++;
-                aaa =true;
+                aaa = true;
             }
         });
         return holder;
@@ -52,12 +78,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-//        holder.mTextView.setText(holder.hashCode() + " ");
-        holder.mTextView.setText(position+"");
+        holder.mTextView.setText(holder.hashCode() + " ");
+//        holder.mTextView.setText(position+"");
 
-        showLight(holder.itemView);
+//        showLight(holder.itemView);
+        holder.mTextView.setAlpha(1.0f);
+        holder.itemView.setTag(position);
 
-        //查看一共有多少 Holder 对象
+/*        //查看一共有多少 Holder 对象
         boolean success = holderObjectSet.add(holder.hashCode() + "");
         if (!success) {
             Log.e("Track", "false : " + holder.hashCode());
@@ -70,22 +98,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             }
             Log.e("Track", stringBuilder.toString());
             Log.e("Track", holderObjectSet.size() + "");
-        }
+        }*/
     }
 
-    boolean aaa= false;
+    boolean aaa = false;
 
     @Override
     public int getItemCount() {
-        return mDataSet.length+(aaa?1:0);
+        return mDataSet.length + (aaa ? 1 : 0);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextView;
+        public MyTextView mTextView;
+        boolean first = true;
+
 
         public ViewHolder(View itemView) {
             super(itemView);
-            mTextView = (TextView) itemView;
+            mTextView = (MyTextView) itemView.findViewById(R.id.text);
         }
     }
 }

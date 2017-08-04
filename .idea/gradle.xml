@@ -10,9 +10,18 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/clipimage" />
+            <option value="$PROJECT_DIR$/getmusic" />
+            <option value="$PROJECT_DIR$/handler" />
+            <option value="$PROJECT_DIR$/layouttest" />
             <option value="$PROJECT_DIR$/multitypeadapter" />
             <option value="$PROJECT_DIR$/mvvm" />
+            <option value="$PROJECT_DIR$/myapplication2" />
+            <option value="$PROJECT_DIR$/myc" />
             <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/servicetest" />
+            <option value="$PROJECT_DIR$/view" />
+            <option value="$PROJECT_DIR$/viewtest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

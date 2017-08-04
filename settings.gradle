@@ -1,1 +1,1 @@
-include ':app', ':mvvm', ':recyclerview', ':multitypeadapter'
+include ':app', ':mvvm', ':recyclerview', ':multitypeadapter', ':view', ':handler', ':clipimage', ':viewtest', ':myapplication2', ':myc', ':getmusic', ':servicetest', ':layouttest'

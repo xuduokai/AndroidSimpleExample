@@ -1,34 +1,43 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.recyclerview.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Horizontal"
-        android:textSize="18sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:scrollbars="horizontal" />
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Head"
+            android:textSize="18sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Vertical"
-        android:textSize="18sp" />
+        <!--
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:scrollbars="horizontal" />
+        -->
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scrollbars="vertical" />
-</LinearLayout>
+        <com.example.recyclerview.MyRecyclerView
+            android:id="@+id/recyclerview_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/foot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Foot"
+            android:textSize="18sp" />
+    </LinearLayout>
+</com.example.recyclerview.MyScrollView>

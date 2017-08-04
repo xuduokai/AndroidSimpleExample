@@ -4,9 +4,18 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clipimage/clipimage.iml" filepath="$PROJECT_DIR$/clipimage/clipimage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getmusic/getmusic.iml" filepath="$PROJECT_DIR$/getmusic/getmusic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handler/handler.iml" filepath="$PROJECT_DIR$/handler/handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/layouttest/layouttest.iml" filepath="$PROJECT_DIR$/layouttest/layouttest.iml" />
       <module fileurl="file://$PROJECT_DIR$/multitypeadapter/multitypeadapter.iml" filepath="$PROJECT_DIR$/multitypeadapter/multitypeadapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvvm/mvvm.iml" filepath="$PROJECT_DIR$/mvvm/mvvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myapplication2/myapplication2.iml" filepath="$PROJECT_DIR$/myapplication2/myapplication2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myc/myc.iml" filepath="$PROJECT_DIR$/myc/myc.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicetest/servicetest.iml" filepath="$PROJECT_DIR$/servicetest/servicetest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view/view.iml" filepath="$PROJECT_DIR$/view/view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewtest/viewtest.iml" filepath="$PROJECT_DIR$/viewtest/viewtest.iml" />
     </modules>
   </component>
 </project>

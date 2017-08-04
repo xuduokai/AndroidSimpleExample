@@ -18,7 +18,14 @@
             android:id="@+id/img"
             android:layout_width="370dp"
             android:layout_height="202dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_blur_bg"
             />
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xu.getmusic.TailorBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout8"
+    android:layout_width="match_parent"
+    android:layout_height="16.67dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5.67dp"
+        android:text="00:38"
+        android:textColor="#99FFFFFF"
+        android:textSize="8.67sp" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <SeekBar
+            android:id="@+id/music_progress_bar"
+            style="@android:style/Widget.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="2.1dp"
+            android:layout_centerVertical="true"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/seekbar_progress_bg"
+            android:thumb="@drawable/seekbar_thumb_bg" />
+
+        <RelativeLayout
+            android:id="@+id/video_new_cut_relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/leftTouch"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:clickable="true" />
+
+            <Button
+                android:id="@+id/video_new_cut_txt_left"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/tailorbar_seek_bt_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2.1dp"
+                android:layout_centerVertical="true"
+                android:background="#B3FFFFFF" />
+
+            <Button
+                android:id="@+id/video_new_cut_txt_right"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/tailorbar_seek_bt_bg" />
+
+            <View
+                android:id="@+id/rightTouch"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:clickable="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/video_new_cut_img_left"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="#70000000" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/video_new_cut_img_right"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="#70000000" />-->
+
+
+    <TextView
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5.67dp"
+        android:text="00:42"
+        android:textColor="#99FFFFFF"
+        android:textSize="8.67sp" />
+
+</com.xu.getmusic.TailorBar>
